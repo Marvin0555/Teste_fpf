@@ -19,7 +19,7 @@ int exercise3(int a[], int t){ // Função que recebe o array e o tamanho do arr
 
 int main ()
 {
-    int A[] = {2 , 3, 1 ,6 ,4}; //array de teste
+    int A[] = {9 , 3, 1 ,6 ,4}; //array de teste
     int tamanho = sizeof(A)/sizeof(int); // verifica o tamanho do array
 
 
