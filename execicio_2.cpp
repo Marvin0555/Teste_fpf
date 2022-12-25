@@ -4,29 +4,30 @@
 
 
 #include <iostream>
-int valores[] = {10, 1, 2,3,10,1,2,3,5};
 
-int verifica(int g, int i, int j){
+
+int exercise2(int valores[], int g, int i, int j){
     int v = 0 ;
     if(j > g || i == g) 
     {
-        std:: cout << i << " possui valor ";
-        return valores[i];
+        return i;
     }
-    else if(valores[i] != valores[j])
+    else if(valores[i] != valores[j] || i == j)
     {
-        v = verifica(g,i,j+1);   
+        v = exercise2(valores,g,i,j+1);   
     }
     else
     {
-        v = verifica(g,i+1,0);
+        v = exercise2(valores,g,i+1,0);
     }
     return v;
 
 }
 int main (){
+    int valores[] = {1, 2, 3, 3, 7, 2, 5, 5, 1};
     int tamanho = sizeof(valores)/sizeof(int);
     //std:: cout << tamanho << "\n";
-    std:: cout << "O elemento no índice " << verifica(tamanho-1,0,1) << " e não está pareado" << "\n";
-    return 0;
+    std:: cout << "O elemento no índice "<< exercise2(valores, tamanho-1,0,1) << " possui valor " << valores[exercise2(valores, tamanho-1,0,1)]<< " e não está pareado" << "\n";
+    return valores[exercise2(valores, tamanho-1,0,1)];
 }
+
