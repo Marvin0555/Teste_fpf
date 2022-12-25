@@ -21,8 +21,6 @@ int main ()
 {
     int A[] = {9 , 3, 1 ,6 ,4}; //array de teste
     int tamanho = sizeof(A)/sizeof(int); // verifica o tamanho do array
-
-
     std:: cout << "O menor inteiro positivo não presente no array é " <<exercise3(A, tamanho) << "\n"; // printa a mensagem de resposta
     return exercise3(A, tamanho); // retorna o resultado do programa
 
