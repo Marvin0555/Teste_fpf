@@ -24,8 +24,8 @@ int recebe_valor(int i){ // Função responsável por receber os dos valore de e
 }
 
 int exercise1(int x , int y) //
-{   int n = 0;
-    int i = 0;
+{   int n = 0;// contador de números 1
+    int i = 0;//variável utilizada como índice do vetor binário
     int valor_produto = x*y; //resultado do produto dos números de entrada
     int binario[50]; //vetor inteiro que recebe o valor do número em binário
     std::cout << "O valor de " << x*y << " em binario é: "; // printa uma mensagem do resultado do valor
@@ -39,7 +39,7 @@ int exercise1(int x , int y) //
         else // entra aqui se o resto não for 0, logo ele é 1
         {
             valor_produto/=2; // valor_produto é dividido na metade 
-            n++; // o contato de números 1 no binário é incrementado
+            n++; // o contador de números 1 no binário é incrementado
         }
         i++; // incrementa o i para permitir a variável binária receber o próximo valor binário
     }
